@@ -13,6 +13,7 @@ def connect_db():
 def index():
     if request.method == 'POST':
         nombre = request.form['nombre']
+        sexo = request.form['sexo']
         dui = request.form['dui']
         edad = request.form['edad']
         telefono = request.form['telefono']
@@ -27,9 +28,9 @@ def index():
         conn = connect_db()
         cur = conn.cursor()
         cur.execute("""
-            INSERT INTO personas (nombre_completo, dui, edad, telefono, grupo_organizacion, municipio, comunidad, area, procesos_actuales, procesos_previos, total_procesos_actuales)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-        """, (nombre, dui, edad, telefono, grupo, municipio, comunidad, area, procesos_actuales, procesos_previos, total_procesos))
+            INSERT INTO personas (nombre_completo, sexo, dui, edad, telefono, grupo_organizacion, municipio, comunidad, area, procesos_actuales, procesos_previos, total_procesos_actuales)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """, (nombre, sexo, dui, edad, telefono, grupo, municipio, comunidad, area, procesos_actuales, procesos_previos, total_procesos))
         conn.commit()
         cur.close()
         conn.close()

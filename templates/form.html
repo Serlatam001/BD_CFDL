@@ -4,75 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px 0px #ccc;
-            width: 50%;
-            margin: auto;
-        }
-        label, input {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        button {
-            background: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background: #218838;
-        }
-    </style>
 </head>
 <body>
-    <h2 style="text-align: center;">Formulario de Ingreso</h2>
+    <h2>Formulario de Ingreso</h2>
     <form method="POST">
         <label>Nombre Completo:</label>
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" required><br>
+
+        <label>Sexo:</label>
+        <select name="sexo" required>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="N/B">N/B</option>
+        </select><br>
 
         <label>DUI:</label>
-        <input type="text" name="dui" required>
+        <input type="text" name="dui" required><br>
 
         <label>Edad:</label>
-        <input type="number" name="edad" required>
+        <input type="number" name="edad" required><br>
 
         <label>Teléfono:</label>
-        <input type="text" name="telefono" required>
+        <input type="text" name="telefono" required><br>
 
         <label>Grupo/Organización:</label>
-        <input type="text" name="grupo">
+        <input type="text" name="grupo"><br>
 
         <label>Municipio:</label>
-        <input type="text" name="municipio" required>
+        <select name="municipio" required>
+            <option value="">Seleccione un municipio</option>
+            <option value="San Salvador">San Salvador</option>
+            <option value="Santa Ana">Santa Ana</option>
+            <option value="San Miguel">San Miguel</option>
+            <!-- Agrega más opciones según los municipios disponibles -->
+        </select><br>
 
         <label>Comunidad:</label>
-        <input type="text" name="comunidad" required>
+        <input type="text" name="comunidad" required><br>
 
         <label>Área:</label>
-        <input type="text" name="area">
+        <input type="text" name="area"><br>
 
         <label>Procesos Actuales:</label>
-        <input type="text" name="procesos_actuales">
+        <select name="procesos_actuales">
+            <option value="">Seleccione un proceso</option>
+            <option value="Educación">Educación</option>
+            <option value="Salud">Salud</option>
+            <option value="Medio Ambiente">Medio Ambiente</option>
+            <!-- Agrega más opciones según los procesos disponibles -->
+        </select><br>
 
         <label>Procesos Previos:</label>
-        <input type="text" name="procesos_previos">
+        <select name="procesos_previos">
+            <option value="">Seleccione un proceso</option>
+            <option value="Educación">Educación</option>
+            <option value="Salud">Salud</option>
+            <option value="Medio Ambiente">Medio Ambiente</option>
+            <!-- Agrega más opciones según los procesos disponibles -->
+        </select><br>
 
         <label>Total Procesos Actuales:</label>
-        <input type="number" name="total_procesos">
+        <input type="number" name="total_procesos"><br>
 
         <button type="submit">Enviar</button>
     </form>
